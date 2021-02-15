@@ -13,9 +13,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            pip install pytest
-            $ pip install pytest-html
-            echo 'installed'
+            pip install --user -r requirements.txt
             pytest --html=pytest_report.html
       - store_test_results:
           path: test-reports
