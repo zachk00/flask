@@ -11,6 +11,6 @@ def test_index():
     url = '/'
 
     response = client.get(url)
-    assert response.get_data() == b'Hello, World!'
+    assert response.get_data() == b'Hello World!'
     assert response.status_code == 200
  
