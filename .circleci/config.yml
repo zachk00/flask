@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            pytest 
+            python3 -m pytest
       - store_test_results:
           path: test-reports
       - store_artifacts:
