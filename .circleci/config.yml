@@ -13,7 +13,9 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            python3 -m pytest
+            pip install pytest
+            echo 'installed'
+            pytest --html=pytest_report.html
       - store_test_results:
           path: test-reports
       - store_artifacts:
