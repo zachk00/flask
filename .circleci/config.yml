@@ -15,7 +15,7 @@ jobs:
           command:
             pip install pytest
             export PYTHONPATH=src
-            pytest --html=pytest_report.html
+            pytest 
       - store_test_results:
           path: test-reports
       - store_artifacts:
