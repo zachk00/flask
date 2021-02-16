@@ -12,6 +12,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
+            ls
             pytest --html=report.html --self-contained-html
       - store_test_results:
           path: test-reports
