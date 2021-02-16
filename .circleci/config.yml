@@ -13,7 +13,8 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            pip install --user -r requirements.txt
+            pip install pytest
+            export PYTHONPATH=src
             pytest --html=pytest_report.html
       - store_test_results:
           path: test-reports
