@@ -13,7 +13,6 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            pip install pytest
             python test_routes.py
       - store_test_results:
           path: test-reports
