@@ -13,8 +13,8 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
+            checkout
             pip install pytest
-            echo 'installed'
             pytest tests
       - store_test_results:
           path: test-reports
