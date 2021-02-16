@@ -9,8 +9,12 @@ jobs:
           name: Install Python Dependencies
           command:
             echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
+            pip install --user -r requirements.txt      
+      - run:
+        name: Run Unit Tests
+          command:
             pip install --user -r requirements.txt
-            python test_routes.py
+            pytest
       - store_test_results:
           path: test-reports
       - store_artifacts:
