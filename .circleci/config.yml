@@ -13,9 +13,9 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            checkout
             pip install pytest
             pytest tests
+            pwd
       - store_test_results:
           path: test-reports
       - store_artifacts:
