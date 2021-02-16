@@ -14,8 +14,7 @@ jobs:
           name: Run Unit Tests
           command:
             pip install pytest
-            ~/.local/bin/pytest
-            pwd
+            python test_routes.py
       - store_test_results:
           path: test-reports
       - store_artifacts:
