@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command:
-            pytest --html=report.html --self-contained-html
+            pytest --html=test-reports/report.html --self-contained-html
       - store_test_results:
           path: test-reports
       - store_artifacts:
